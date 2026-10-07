@@ -11,10 +11,8 @@ No build step, no dependencies, no backend: `index.html`, `styles.css`,
 
 | Overview | Jar detail |
 |---|---|
-| ![Overview with a Travel jar] (<img width="445" height="381" alt="image" src="https://github.com/user-attachments/assets/320e99f6-8d0a-44f5-9f12-aff21809d3a0" />
-)
- | ![Jar detail panel with deposits](<img width="695" height="831" alt="image" src="https://github.com/user-attachments/assets/09193cbf-27e8-4144-8018-a198f23f928a" />
-) |
+| ![Overview with a Travel jar] <img width="445" height="381" alt="image" src="https://github.com/user-attachments/assets/320e99f6-8d0a-44f5-9f12-aff21809d3a0" />
+ | ![Jar detail panel with deposits]<img width="695" height="831" alt="image" src="https://github.com/user-attachments/assets/09193cbf-27e8-4144-8018-a198f23f928a" /> |
 
 ## Features
 
