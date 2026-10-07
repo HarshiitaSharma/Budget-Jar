@@ -7,6 +7,14 @@ general-store ledger style, instead of another dashboard-with-progress-bars.
 No build step, no dependencies, no backend: `index.html`, `styles.css`,
 `script.js`. Data is saved in your browser's `localStorage`.
 
+## Screenshots
+
+| Overview | Jar detail |
+|---|---|
+| ![Overview with a Travel jar](<img width="445" height="381" alt="image" src="https://github.com/user-attachments/assets/38550b00-dce5-4243-8f8b-533b8a7d161a" />)
+ | ![Jar detail panel with deposits](<img width="695" height="831" alt="image" src="https://github.com/user-attachments/assets/09193cbf-27e8-4144-8018-a198f23f928a" />
+) |
+
 ## Features
 
 - **Jars**: name a goal, set a target amount, pick a color — the jar fills
