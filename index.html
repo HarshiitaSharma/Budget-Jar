@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jars. — save toward what matters</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Libre+Franklin:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🫙</text></svg>">
+</head>
+<body>
+
+<div class="store">
+
+  <header class="top">
+    <h1>Jars<span class="dot">.</span></h1>
+    <p class="sub">a simple way to save toward what matters</p>
+  </header>
+
+  <section class="card overview">
+    <div class="overview-row">
+      <div class="overview-stat">
+        <span class="o-label">saved</span>
+        <span class="o-num" id="totalSaved">$0</span>
+      </div>
+      <div class="overview-stat">
+        <span class="o-label">goal</span>
+        <span class="o-num" id="totalGoal">$0</span>
+      </div>
+      <div class="overview-stat">
+        <span class="o-label">jars</span>
+        <span class="o-num" id="jarCount">0</span>
+      </div>
+    </div>
+    <div class="ledger-bar"><i id="overviewFill" style="width:0%"></i></div>
+  </section>
+
+  <div class="shelf-wrap">
+    <div class="jar-grid" id="jarGrid"></div>
+    <div class="shelf-board"></div>
+  </div>
+  <p class="empty" id="jarEmpty">No jars yet — add your first one below.</p>
+
+  <section class="card">
+    <div class="card-head"><h2>New jar</h2></div>
+    <div class="new-jar-form">
+      <input type="text" id="jarName" placeholder="What are you saving for?" maxlength="30">
+      <input type="number" id="jarGoal" placeholder="Goal amount" min="1" step="any">
+      <div class="color-row" id="colorRow"></div>
+      <button class="btn" id="addJarBtn">Add jar</button>
+    </div>
+  </section>
+
+  <section class="card slim">
+    <div class="card-head"><h2>Backup</h2></div>
+    <p class="muted">Your jars live only in this browser. Export a copy now and then.</p>
+    <div class="backup-row">
+      <button class="btn ghost" id="exportBtn">Export JSON</button>
+      <label class="btn ghost file-btn">Import JSON
+        <input type="file" id="importFile" accept="application/json" hidden>
+      </label>
+    </div>
+  </section>
+
+</div>
+
+<!-- jar detail panel -->
+<div class="detail-overlay" id="detailOverlay" hidden>
+  <div class="detail-panel">
+    <button class="detail-close" id="detailClose" aria-label="Close">×</button>
+    <div class="detail-head">
+      <div class="detail-jar" id="detailJarSvg"></div>
+      <div>
+        <h2 id="detailName">—</h2>
+        <p class="detail-amounts"><span id="detailSaved">$0</span> of <span id="detailGoal">$0</span></p>
+      </div>
+    </div>
+
+    <div class="detail-add">
+      <div class="quick-amounts" id="quickAmounts"></div>
+      <div class="custom-row">
+        <input type="number" id="customAmount" placeholder="Custom amount" min="0.01" step="any">
+        <input type="text" id="txnNote" placeholder="Note (optional)" maxlength="40">
+        <button class="btn small" id="addMoneyBtn">Add</button>
+        <button class="btn small ghost" id="removeMoneyBtn">Withdraw</button>
+      </div>
+    </div>
+
+    <h3 class="txn-head">History</h3>
+    <ul class="txn-list" id="txnList"></ul>
+
+    <button class="remove-jar" id="removeJarBtn">Delete this jar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
