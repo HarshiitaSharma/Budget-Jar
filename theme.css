@@ -1,0 +1,27 @@
+/* Dark mode: overrides the palette from styles.css */
+:root[data-theme="dark"] {
+  --denim:#8FB3D1; --denim-deep:#A9C6DE; --brass:#D8B45E; --brass-deep:#8A6A2A;
+  --kraft:#3A3629; --cream:#17150F; --terracotta:#E07A57;
+  --ink:#EFE9D8; --ink-soft:#A89F8A; --line:#3B3627; --shadow:rgba(0,0,0,.45);
+}
+:root[data-theme="dark"] .card,
+:root[data-theme="dark"] .quick-amounts button { background:#1F1C14; }
+:root[data-theme="dark"] .btn { color:#17150F; }
+:root[data-theme="dark"] .btn.ghost { color:var(--denim); }
+:root[data-theme="dark"] .txn-item .t-amt.pos { color:#7FC48F; }
+:root[data-theme="dark"] .jar svg path[fill="#ffffff"] { fill:#2a2619; }
+
+.theme-toggle {
+  position:fixed; top:14px; right:14px; z-index:5;
+  width:38px; height:38px; border-radius:50%;
+  border:1.5px solid var(--line); background:var(--cream); color:var(--ink);
+  font-size:17px; cursor:pointer; box-shadow:0 4px 10px var(--shadow);
+}
+.theme-toggle:hover { border-color:var(--denim); }
+
+/* Insights + CSV button */
+.insights-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.insight { display:flex; flex-direction:column; gap:3px; }
+.insight b { font-family:'Space Mono',monospace; font-size:16px; color:var(--denim); }
+.insight span { font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-soft); }
+.csv-btn { display:block; margin:0 auto 10px; }

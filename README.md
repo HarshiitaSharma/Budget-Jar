@@ -19,6 +19,14 @@ Built with plain HTML, CSS, and JavaScript — no build step, dependencies, or b
 - **Per-Jar History** — View every deposit and withdrawal, with the newest transactions shown first.
 - **Backup & Restore** — Export your complete data as JSON and import it on another device.
 
+## Extras
+
+- **Dark mode** — toggle in the top-right corner; follows your OS setting by default.
+- **Insights** — monthly deposits/withdrawals, goals reached, and the jar closest to its goal.
+- **CSV export** — download any jar's history with a running balance.
+- **Installable PWA** — works offline and can be added to your home screen.
+- **Auto-deploy** — a GitHub Actions workflow publishes to Pages on every push to `main`.
+
 ## Running Locally
 
 No installation or build process is required.
@@ -77,8 +85,13 @@ Use the **Export** feature to back up your jars and **Import** to restore them o
 ```text
 budget-jars/
 ├── index.html
-├── styles.css
+├── styles.css / theme.css
 ├── script.js
+├── theme.js / csv-export.js / stats.js / pwa.js
+├── sw.js / manifest.webmanifest / icon.svg
+├── .github/workflows/pages.yml
+├── CHANGELOG.md
+├── LICENSE
 └── README.md
 ```
 
